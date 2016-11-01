@@ -1,5 +1,6 @@
 <?php
-namespace As3\PostProcessBundle\DependencyInjection\Compiler;
+
+namespace As3\Bundle\PostProcessBundle\DependencyInjection\Compiler;
 
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;

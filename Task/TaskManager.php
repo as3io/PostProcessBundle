@@ -1,11 +1,11 @@
 <?php
 
-namespace As3\PostProcessBundle\Task;
+namespace As3\Bundle\PostProcessBundle\Task;
 
 use Symfony\Component\HttpKernel\Event\FilterResponseEvent;
 use Symfony\Component\HttpKernel\Event\PostResponseEvent;
 use Symfony\Component\HttpFoundation\Response;
-use As3\PostProcessBundle\Plugins\PluginInterface;
+use As3\Bundle\PostProcessBundle\Plugins\PluginInterface;
 
 /**
  * The task manager is responsible for running PHP code after a response is sent to the browser.
