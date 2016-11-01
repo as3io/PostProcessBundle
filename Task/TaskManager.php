@@ -174,7 +174,11 @@ class TaskManager
     public function execute(PostResponseEvent $event)
     {
         if ($this->isEnabled() && $this->masterRequest) {
-            session_write_close();
+            $session = $event->getRequest()->getSession();
+            if (null !== $session) {
+                // Saves the session, which calls PHP's session_write_close()
+                $session->save();
+            }
 
             // Allow any loaded plugins to fire
             foreach ($this->getPlugins() as $plugin) {
