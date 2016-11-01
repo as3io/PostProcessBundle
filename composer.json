@@ -2,7 +2,6 @@
     "name": "as3/post-process-bundle",
     "type": "symfony-bundle",
     "license": "MIT",
-    "type": "library",
     "description": "Provides centralized support for executing callable code before Symfony framework termination.",
     "authors": [
         {

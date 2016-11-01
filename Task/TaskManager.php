@@ -63,7 +63,7 @@ class TaskManager
             'object'    => $task,
             'priority'  => (Integer) $priority,
         ];
-        $this->tasks[get_class($task)] = $prioritized;
+        $this->tasks[] = $prioritized;
 
         $sortFunc = function ($a, $b) {
             return $a['priority'] > $b['priority'] ? -1 : 1;

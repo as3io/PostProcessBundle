@@ -18,7 +18,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('as3_post_process');
+        $treeBuilder->root('as3_post_process');
         return $treeBuilder;
     }
 }
