@@ -23,7 +23,7 @@ class TaskManager
      * @see TaskManager::addTask() To add a TaskInterface class
      * @var TaskInterface[]
      */
-    protected $tasks = [];
+    private $tasks = [];
 
     /**
      * All enabled plugins to be executed on kernel.response and kernel.terminate events.
@@ -31,19 +31,19 @@ class TaskManager
      * @see TaskManager::addPlugin()
      * @var PluginInterface[]
      */
-    protected $plugins = [];
+    private $plugins = [];
 
     /**
      * @var boolean
      */
-    protected $masterRequest = true;
+    private $masterRequest = true;
 
     /**
      * Determines whether Tasks should be executed
      *
      * @var bool
      */
-    protected $enabled = true;
+    private $enabled = true;
 
     /**
      * Adds a registered task.
