@@ -12,7 +12,7 @@ To install this bundle via composer, perform the following command: `composer re
 ### Register the Bundle
 
 Once installed, register the bundle in your `AppKernel.php`:
-```
+```php
 // app/AppKernel.php
 public function registerBundles()
 {
@@ -35,8 +35,8 @@ A task can be used to execute logic after the response has been sent to the user
 
 Example:
 
-```
-use As3\PostProcessBundle\TaskInterface;
+```php
+use As3\Bundle\PostProcessBundle\TaskInterface;
 
 class SleepTestTask implements TaskInterface
 {
@@ -52,7 +52,7 @@ class SleepTestTask implements TaskInterface
 ```
 
 To register your task, call the `addTask` method against the task manager's service (`as3_post_process.task.manager`):
-```
+```php
     $manager = $this->get('as3_post_process.task.manager');
     $manager->addTask(new SleepTestTask(), 5);
 ```
@@ -61,7 +61,7 @@ Tasks can have a `priority` set when they are added to the manager -- by default
 
 You can also register a service by using the tag `as3_post_process.task` if your task should be run on every request.
 
-```
+```yaml
 # src\MyBundle\Resources\services.yml
 services:
 my_app.my_cool_task:
@@ -76,7 +76,7 @@ A plugin can be used to modify the response before it is returned to the user.
 
 Example:
 
-```
+```php
 use Symfony\Component\HttpFoundation\Response;
 
 /**
@@ -117,7 +117,7 @@ class NewRelicInjector extends PluginInterface
 
 This plugin will disable automatic injection of NewRelic end user monitoring javascript. To enable this for all requests, add the following service definition:
 
-```
+```yaml
     my_app.my_bundle.new_relic_injector:
         class: MyApp\MyBundle\NewRelicPlugin
         tags:
