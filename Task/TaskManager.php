@@ -169,8 +169,7 @@ class TaskManager
      * Executes the post-response Tasks.
      * Is called via Symfony's kernel.terminate event.
      *
-     * @param  Symfony\Component\HttpKernel\Event\PostResponseEvent $event The Symfony post response event
-     * @return void
+     * @param   PostResponseEvent   $event
      */
     public function execute(PostResponseEvent $event)
     {
@@ -192,8 +191,8 @@ class TaskManager
      * Sets the HTTP headers required to execute post-response Tasks.
      * Is called via Symfony's kernel.response event.
      *
-     * @param  Symfony\Component\HttpKernel\Event\FilterResponseEvent $event The Symfony response event
-     * @return Symfony\Component\HttpFoundation\Response
+     * @param   FilterResponseEvent     $event
+     * @return  Response
      */
     public function filterResponse(FilterResponseEvent $event)
     {
