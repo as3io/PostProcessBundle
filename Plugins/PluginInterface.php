@@ -1,6 +1,6 @@
 <?php
 
-namespace As3\PostProcessBundle\Plugins;
+namespace As3\Bundle\PostProcessBundle\Plugins;
 
 use Symfony\Component\HttpKernel\Event\PostResponseEvent;
 use Symfony\Component\HttpFoundation\Response;

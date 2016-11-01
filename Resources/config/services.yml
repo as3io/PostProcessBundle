@@ -1,6 +1,6 @@
 services:
     as3_post_process.task.manager:
-        class: As3\PostProcessBundle\Task\TaskManager
+        class: As3\Bundle\PostProcessBundle\Task\TaskManager
         tags:
             - { name: kernel.event_listener, event: kernel.response, method: filterResponse, priority: -255 }
             - { name: kernel.event_listener, event: kernel.terminate, method: execute, priority: 1 }

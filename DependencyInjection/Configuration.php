@@ -1,6 +1,6 @@
 <?php
 
-namespace As3\PostProcessBundle\DependencyInjection;
+namespace As3\Bundle\PostProcessBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
