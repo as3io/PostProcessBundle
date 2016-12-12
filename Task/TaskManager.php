@@ -175,7 +175,7 @@ class TaskManager
     {
         if ($this->isEnabled() && $this->masterRequest) {
             $session = $event->getRequest()->getSession();
-            if (null !== $session) {
+            if (null !== $session && $session->isStarted()) {
                 // Saves the session, which calls PHP's session_write_close()
                 $session->save();
             }
