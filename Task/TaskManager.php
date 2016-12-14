@@ -231,7 +231,7 @@ class TaskManager
 
         // Ensures minimum output has been set, otherwise PHP will not flush properly and tasks will hang the browser.
         $minOutputLen = PHP_INT_SIZE * 1024;
-        if ($length < $minOutputLen) {
+        if ($length < $minOutputLen && !$response->isEmpty()) {
             $padding = $minOutputLen - $length + 1;
             $response->setContent($content.str_pad('', $padding));
         }
