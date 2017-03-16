@@ -209,7 +209,7 @@ class TaskManager
         }
         $this->masterRequest = true;
 
-        if ((!$this->hasTasks() && !$this->hasPlugins()) || !$this->isEnabled()) {
+        if (!$this->hasTasks() || !$this->isEnabled()) {
             // Nothing to process. Return response.
             return $response;
         }
